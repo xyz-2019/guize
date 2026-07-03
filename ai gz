@@ -3,14 +3,14 @@ enable_rule_generator=false
 overwrite_original_rules=false
 
 ; =========================
-; 1. 本地直连（最高优先级）
+; 1. 本地
 ; =========================
 
 ruleset=DIRECT,[]GEOSITE,private
 ruleset=DIRECT,[]GEOSITE,cn
 
 ; =========================
-; 2. AI 服务
+; 2. AI
 ; =========================
 
 ruleset=OpenAI,[]GEOSITE,openai
@@ -26,7 +26,7 @@ ruleset=Disney,[]GEOSITE,disney
 ruleset=TikTok,[]GEOSITE,tiktok
 
 ; =========================
-; 4. 开发 / 工具
+; 4. 工具
 ; =========================
 
 ruleset=GitHub,[]GEOSITE,github
@@ -53,6 +53,7 @@ ruleset=PROXY,[]GEOSITE,gfw
 ; =========================
 
 ruleset=FINAL,[]FINAL
+
 custom_proxy_group=DIRECT`select`DIRECT`PROXY
 
 custom_proxy_group=PROXY`select`AUTO`US`SG`JP`DIRECT
@@ -64,7 +65,7 @@ custom_proxy_group=SG`url-test`(SG|新加坡|狮城)`https://www.gstatic.com/gen
 custom_proxy_group=JP`url-test`(JP|日本|东京|大阪)`https://www.gstatic.com/generate_204`120,,30
 
 ; =========================
-; 服务专用组（必须一一对应 ruleset）
+; 服务组（唯一版本，不重复）
 ; =========================
 
 custom_proxy_group=OpenAI`select`US`SG`AUTO`PROXY`DIRECT
