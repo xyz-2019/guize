@@ -3,69 +3,82 @@ enable_rule_generator=false
 overwrite_original_rules=false
 
 ; =========================
-; 1. 本地
+; 1. 本地直连（最高优先级）
 ; =========================
 
 ruleset=DIRECT,[]GEOSITE,private
 ruleset=DIRECT,[]GEOSITE,cn
 
 ; =========================
-; 2. AI
+; 2. AI 服务
 ; =========================
 
-ruleset=🤖 ChatGPT,[]GEOSITE,openai
-ruleset=🧠 AI,[]GEOSITE,category-ai-!cn
+ruleset=OpenAI,[]GEOSITE,openai
+ruleset=AI,[]GEOSITE,category-ai-!cn
 
 ; =========================
 ; 3. 流媒体
 ; =========================
 
-ruleset=🎬 YouTube,[]GEOSITE,youtube
-ruleset=🎥 Netflix,[]GEOSITE,netflix
-ruleset=📺 Disney,[]GEOSITE,disney
-ruleset=🎵 TikTok,[]GEOSITE,tiktok
+ruleset=YouTube,[]GEOSITE,youtube
+ruleset=Netflix,[]GEOSITE,netflix
+ruleset=Disney,[]GEOSITE,disney
+ruleset=TikTok,[]GEOSITE,tiktok
 
 ; =========================
-; 4. 工具
+; 4. 开发 / 工具
 ; =========================
 
-ruleset=🛠 GitHub,[]GEOSITE,github
-ruleset=🔎 Google,[]GEOSITE,google
-ruleset=🪟 Microsoft,[]GEOSITE,microsoft
-ruleset=☁️ cloudflare,[]GEOSITE,cloudflare
+ruleset=GitHub,[]GEOSITE,github
+ruleset=Google,[]GEOSITE,google
+ruleset=Microsoft,[]GEOSITE,microsoft
+ruleset=Cloudflare,[]GEOSITE,cloudflare
 
 ; =========================
 ; 5. 社交
 ; =========================
 
-ruleset=🐦 X,[]GEOSITE,twitter
+ruleset=Twitter,[]GEOSITE,twitter
 
-ruleset=📨 Telegram,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.list
+ruleset=Telegram,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.list
 
 ; =========================
 ; 6. GFW
 ; =========================
 
-ruleset=🚀 手动选择,[]GEOSITE,gfw
+ruleset=PROXY,[]GEOSITE,gfw
 
 ; =========================
 ; 7. 兜底
 ; =========================
 
-ruleset=🌐 Default,[]FINAL
-custom_proxy_group=🌐 Default`select`[]🚀 手动选择`[]DIRECT`[]REJECT
+ruleset=FINAL,[]FINAL
+custom_proxy_group=DIRECT`select`DIRECT`PROXY
 
-custom_proxy_group=🚀 手动选择`select`[]DIRECT`[]美国`[]新加坡`[]日本
+custom_proxy_group=PROXY`select`AUTO`US`SG`JP`DIRECT
 
-custom_proxy_group=🤖 ChatGPT`select`[]美国`[]新加坡`[]🚀 手动选择
-custom_proxy_group=🧠 AI`select`[]美国`[]新加坡`[]🚀 手动选择
+custom_proxy_group=AUTO`url-test`.*`https://www.gstatic.com/generate_204`150,,50
 
-custom_proxy_group=🎬 YouTube`select`[]美国`[]日本`[]🚀 手动选择
-custom_proxy_group=🎥 Netflix`select`[]美国`[]日本`[]REJECT
-custom_proxy_group=📺 Disney`select`[]美国`[]日本`[]REJECT
+custom_proxy_group=US`url-test`(US|美国|洛杉矶|硅谷|达拉斯|芝加哥)`https://www.gstatic.com/generate_204`120,,30
+custom_proxy_group=SG`url-test`(SG|新加坡|狮城)`https://www.gstatic.com/generate_204`120,,30
+custom_proxy_group=JP`url-test`(JP|日本|东京|大阪)`https://www.gstatic.com/generate_204`120,,30
 
-custom_proxy_group=🎵 TikTok`select`[]美国`[]日本`[]🚀 手动选择
-custom_proxy_group=🛠 GitHub`select`[]美国`[]🚀 手动选择
-custom_proxy_group=🔎 Google`select`[]美国`[]🚀 手动选择
-custom_proxy_group=🪟 Microsoft`select`[]DIRECT`[]美国
-custom_proxy_group=☁️ cloudflare`select`[]DIRECT`[]美国
+; =========================
+; 服务专用组（必须一一对应 ruleset）
+; =========================
+
+custom_proxy_group=OpenAI`select`US`SG`AUTO`PROXY`DIRECT
+custom_proxy_group=AI`select`US`SG`AUTO`PROXY`DIRECT
+
+custom_proxy_group=YouTube`select`US`JP`AUTO`PROXY
+custom_proxy_group=Netflix`select`US`JP`REJECT
+custom_proxy_group=Disney`select`US`JP`REJECT
+custom_proxy_group=TikTok`select`US`JP`AUTO
+
+custom_proxy_group=GitHub`select`US`AUTO`DIRECT
+custom_proxy_group=Google`select`US`AUTO`DIRECT
+custom_proxy_group=Microsoft`select`DIRECT`US`AUTO
+custom_proxy_group=Cloudflare`select`DIRECT`US`AUTO
+
+custom_proxy_group=Twitter`select`US`AUTO
+custom_proxy_group=Telegram`select`SG`US`AUTO
