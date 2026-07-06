@@ -53,12 +53,12 @@ ruleset=🎬 YouTube,[]GEOSITE,youtube
 ruleset=🎥 Netflix,[]GEOSITE,netflix
 
 ruleset=🎵 TikTok,[]GEOSITE,tiktok
-ruleset=📸 Instagram,[]GEOSITE,instagram
-ruleset=🐦 X,[]GEOSITE,twitter
+;ruleset=📸 Instagram,[]GEOSITE,instagram
+;ruleset=🐦 X,[]GEOSITE,twitter
 
 ruleset=🧑‍💻 GitHub,[]GEOSITE,github
 
-ruleset=🎮 Steam,[]GEOSITE,steam
+;ruleset=🎮 Steam,[]GEOSITE,steam
 
 ruleset=🟨 Binance,[]GEOSITE,binance
 ruleset=🟪 Bybit,[]GEOSITE,bybit
@@ -69,9 +69,9 @@ ruleset=🟦 OKX,[]GEOSITE,okx
 ; Google / Microsoft / Cloudflare
 ; ==========================================================
 
-ruleset=🔎 Google,[]GEOSITE,google
-ruleset=🪟 Microsoft,[]GEOSITE,microsoft
-ruleset=☁️ cloudflare,[]GEOSITE,cloudflare
+;ruleset=🔎 Google,[]GEOSITE,google
+;ruleset=🪟 Microsoft,[]GEOSITE,microsoft
+;ruleset=☁️ cloudflare,[]GEOSITE,cloudflare
 
 
 ; ==========================================================
@@ -99,7 +99,7 @@ custom_proxy_group=🍎 Apple`select`[]🇭🇰 HK`[]🇹🇼 TW`[]🇯🇵 JP`[
 custom_proxy_group=🤖 ChatGPT`select`[]🇭🇰 HK`[]🇹🇼 TW`[]🇯🇵 JP`[]🇸🇬 SG`[]🇺🇸 US`[]🧊 冷门节点`[]🧭 手动选择`[]♻️ 自动选择`[]🌐 Default
 
 custom_proxy_group=🧠 AI`select`[]🇭🇰 HK`[]🇹🇼 TW`[]🇯🇵 JP`[]🇸🇬 SG`[]🇺🇸 US`[]🧊 冷门节点`[]🧭 手动选择`[]♻️ 自动选择`[]🌐 Default
-
+custom_proxy_group=🎵 TikTok`select`[]🇭🇰 HK`[]🇹🇼 TW`[]🇯🇵 JP`[]🇸🇬 SG`[]🇺🇸 US`[]🧊 冷门节点`[]🧭 手动选择`[]♻️ 自动选择`[]🌐 Default
 custom_proxy_group=📨 Telegram`select`[]🇭🇰 HK`[]🇹🇼 TW`[]🇯🇵 JP`[]🇸🇬 SG`[]🇺🇸 US`[]🧊 冷门节点`[]🧭 手动选择`[]♻️ 自动选择`[]🌐 Default
 
 custom_proxy_group=💬 社交媒体`select`[]🇭🇰 HK`[]🇹🇼 TW`[]🇯🇵 JP`[]🇸🇬 SG`[]🇺🇸 US`[]🧊 冷门节点`[]🧭 手动选择`[]♻️ 自动选择`[]🌐 Default
