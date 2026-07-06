@@ -91,7 +91,7 @@ ruleset=🐟 漏网之鱼,[]FINAL
 ; ==========================================================
 ; 2) 策略组（完全保留你的结构，仅移除坏引用）
 ; ==========================================================
-
+custom_proxy_group=🟥 Adobe`select`[]🇭🇰 HK`[]🇹🇼 TW`[]🇯🇵 JP`[]🇸🇬 SG`[]🇺🇸 US`[]🧊 冷门节点`[]🧭 手动选择`[]♻️ 自动选择`[]DIRECT`[]🌐 Default
 custom_proxy_group=📦 Notion`select`[]🇭🇰 HK`[]🇹🇼 TW`[]🇯🇵 JP`[]🇸🇬 SG`[]🇺🇸 US`[]🧊 冷门节点`[]🧭 手动选择`[]♻️ 自动选择`[]DIRECT`[]🌐 Default
 
 custom_proxy_group=🍎 Apple`select`[]🇭🇰 HK`[]🇹🇼 TW`[]🇯🇵 JP`[]🇸🇬 SG`[]🇺🇸 US`[]🧊 冷门节点`[]🧭 手动选择`[]♻️ 自动选择`[]DIRECT`[]🌐 Default
