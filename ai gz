@@ -54,7 +54,7 @@ ruleset=📨 Telegram,https://raw.githubusercontent.com/blackmatrix7/ios_rule_sc
 ; Google / Microsoft / Cloudflare
 ; ==========================================================
 
-;ruleset=🔎 Google,[]GEOSITE,google
+ruleset=🔎 Google,[]GEOSITE,google
 ;ruleset=🪟 Microsoft,[]GEOSITE,microsoft
 ;ruleset=☁️ cloudflare,[]GEOSITE,cloudflare
 
